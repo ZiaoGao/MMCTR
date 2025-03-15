@@ -20,7 +20,7 @@ After running this command, you can get a parquet file at `data/item_info_update
 
 ## Run CTR Prediction
 
-Execute the following command to run the CTR prediction task:
+Execute the following command to train our model for this CTR prediction task:
 
 ```bash
 python run_param_tuner.py --config config/din_dcn_config_tuner.yaml --gpu 0
