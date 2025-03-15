@@ -118,7 +118,7 @@ print("Updated item_emb_d128 dtype:", df_item_info['item_emb_d128'].iloc[1].dtyp
 
 # Save the updated item_info.parquet file
 df_item_info.to_parquet(
-    "data/item_info_update.parquet",
+    "data/item_info_updated.parquet",
     engine="pyarrow",
     index=False
 )
