@@ -1,0 +1,62 @@
+{
+    "dataset_id": "MicroLens_1M_x1",
+    "num_fields": 5,
+    "total_features": 103480,
+    "input_length": 11,
+    "labels": [
+        "label"
+    ],
+    "features": [
+        {
+            "user_id": {
+                "type": "meta"
+            }
+        },
+        {
+            "item_seq": {
+                "type": "meta"
+            }
+        },
+        {
+            "likes_level": {
+                "source": "",
+                "type": "categorical",
+                "padding_idx": 0,
+                "vocab_size": 11
+            }
+        },
+        {
+            "views_level": {
+                "source": "",
+                "type": "categorical",
+                "padding_idx": 0,
+                "vocab_size": 11
+            }
+        },
+        {
+            "item_id": {
+                "source": "item",
+                "type": "categorical",
+                "padding_idx": 0,
+                "vocab_size": 91718
+            }
+        },
+        {
+            "item_tags": {
+                "source": "item",
+                "type": "sequence",
+                "feature_encoder": "layers.MaskedAveragePooling()",
+                "padding_idx": 0,
+                "max_len": 5,
+                "vocab_size": 11740
+            }
+        },
+        {
+            "item_emb_d128": {
+                "source": "item",
+                "type": "embedding",
+                "embedding_dim": 128
+            }
+        }
+    ]
+}
