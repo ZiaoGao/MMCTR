@@ -1,0 +1,17 @@
+keras_preprocessing
+pandas
+PyYAML
+scikit-learn
+numpy
+h5py
+tqdm
+pyarrow
+polars<=1.0.0
+fuxictr==2.3.7
+huggingface-hub==0.29.1
+pandas==2.2.3
+torch==1.13.1+cu117
+torchaudio==0.13.1+cu117
+torchvision==0.14.1+cu117
+transformers==4.49.0
+scikit-learn==1.6.1
