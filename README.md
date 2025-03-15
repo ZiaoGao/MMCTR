@@ -4,6 +4,8 @@
 git clone https://github.com/ZiaoGao/MMCTR.git
 pip install -r requirements
 ```
+## Data
+You can download the dataset from [this link](https://recsys.westlake.edu.cn/MicroLens_1M_MMCTR/) and place it under the `./data` directory.
 
 ## Multimodal Embedding Extraction
 
