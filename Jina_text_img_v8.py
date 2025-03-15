@@ -12,7 +12,7 @@ CUDA="cuda:0"
 
 # Load the item features dataframe
 df_item_feature = pd.read_parquet("item_feature.parquet", engine="pyarrow")
-print(df_item_feature)
+#print(df_item_feature)
 
 # Initialize the CLIP model
 model = AutoModel.from_pretrained('jinaai/jina-clip-v2', trust_remote_code=True)
@@ -91,7 +91,7 @@ final_embeddings_pca = pca.fit_transform(final_embeddings)
 final_embeddings_pca = final_embeddings_pca.astype(np.float64)  # 关键修复：改为float64
 
 # Print the shape of the final embeddings
-print("Final Embeddings Shape after PCA:", final_embeddings_pca.shape)
+#print("Final Embeddings Shape after PCA:", final_embeddings_pca.shape)
 
 # Example of how to compare similarity between an image and a title:
 # Compute cosine similarity between image embedding and text embedding
@@ -99,13 +99,13 @@ similarities = cosine_similarity(all_image_embeddings, all_text_embeddings)
 
 # Calculate the average similarity across all items
 average_similarity = similarities.diagonal().mean()  # 计算对角线的平均值
-print(f"Average similarity across all items: {average_similarity:.4f}")
+#print(f"Average similarity across all items: {average_similarity:.4f}")
 
 # Load the item_info.parquet file
-df_item_info = pd.read_parquet("data/Jina_CLIP_v8/item_info.parquet", engine="pyarrow")
+df_item_info = pd.read_parquet("data/item_info.parquet", engine="pyarrow")
 
 # 检查原始列的数据类型（调试用）
-print("Original item_emb_d128 dtype:", df_item_info['item_emb_d128'].iloc[1].dtype)  # 查看第二行的类型
+#print("Original item_emb_d128 dtype:", df_item_info['item_emb_d128'].iloc[1].dtype)  # 查看第二行的类型
 
 # Ensure that the embeddings are aligned with the item_info dataframe
 # The first row (item 0) is reserved, so we start from item 1
@@ -118,7 +118,7 @@ print("Updated item_emb_d128 dtype:", df_item_info['item_emb_d128'].iloc[1].dtyp
 
 # Save the updated item_info.parquet file
 df_item_info.to_parquet(
-    "data/Jina_CLIP_v8/item_info_updated.parquet",
+    "data/item_info_update.parquet",
     engine="pyarrow",
     index=False
 )
