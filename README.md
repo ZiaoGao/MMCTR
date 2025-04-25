@@ -36,4 +36,5 @@ python prediction.py --config config/din_dcn_config_tuner --expid DIN_DCN_MicroL
 
 - **Multimodal Embeddings:** `data/item_info_updated.parquet`
 - **Final Model Checkpoint:** `checkpoints/MicroLens_1M_x1/DIN_DCN_MicroLens_1M_x1_013_1e9c0132.model`
+- Both checkpoints uploaded on Huggingface (link:https://huggingface.co/geigenklang/mmctr_jzzx_ntu/tree/main)
 
